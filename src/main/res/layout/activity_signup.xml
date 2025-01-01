@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--UI components for the sign up page-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Button to go back to login page from sign up page-->
+    <Button
+        android:id="@+id/goBackToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="159dp"
+        android:text="Log in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <!--Text explaining to use Login button if already have an account-->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="283dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="199dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="199dp"
+        android:text="Already have an account? Click &quot;Log in&quot;"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp"
+        tools:text="Already have an account? Click &quot;Log in&quot;" />
+
+    <!--Text field for user input for username-->
+    <EditText
+        android:id="@+id/usernameEntry"
+        android:layout_width="267dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Text field for user input for password-->
+    <EditText
+        android:id="@+id/passwordEntry"
+        android:layout_width="263dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEntry" />
+
+    <!--Text field for user input for password confirmation-->
+    <EditText
+        android:id="@+id/confirmPasswordEntry"
+        android:layout_width="263dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEntry" />
+
+    <!--Text field for user input for username-->
+    <TextView
+        android:id="@+id/themeHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Select your theme: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordEntry" />
+
+    <!--Drop down to choose theme-->
+    <Spinner
+        android:id="@+id/themeSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="160dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/themeHint" />
+
+    <!--Button to complete sign up-->
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="159dp"
+        android:text="Sign up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/themeSelection" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

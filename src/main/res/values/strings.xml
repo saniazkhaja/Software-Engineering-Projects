@@ -1,0 +1,11 @@
+<resources>
+    <!--Saving our team num to be used in UI-->
+    <string name="app_name">Team 52</string>
+    <!--List of all themes-->
+    <string-array name="themes">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>HighContrast</item>
+        <item>UIUC</item>
+    </string-array>
+</resources>

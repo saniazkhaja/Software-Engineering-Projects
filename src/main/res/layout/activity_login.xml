@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is the login screen where users input their username and password or can sign up. This is the screen th app opens up to-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!--User input for username-->
+    <EditText
+        android:id="@+id/usernameEntry"
+        android:layout_width="267dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--User input for password-->
+    <EditText
+        android:id="@+id/passwordEntry"
+        android:layout_width="263dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEntry" />
+
+    <!--Button to submit user login info-->
+    <Button
+        android:id="@+id/logIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="159dp"
+        android:text="Log in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEntry" />
+
+    <!--Button that can take user to sign up page-->
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="159dp"
+        android:text="Sign up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <!--Text to explain to user when to sign up-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="285dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="199dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="199dp"
+        android:text="Don't have an account yet? Click &quot;Sign Up&quot; to create a new account."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logIn"
+        android:gravity="center"
+        tools:text="Don't have an account yet? Click &quot;Sign Up&quot; to create a new account." />
+</androidx.constraintlayout.widget.ConstraintLayout>

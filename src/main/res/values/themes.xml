@@ -1,0 +1,71 @@
+<!--Includes 4 themes that users can choose from: light, dark, high contrast and UIUC-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Light Theme -->
+    <style name="Theme.MyFirstApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Status Bar -->
+        <item name="android:statusBarColor" tools:targetApi="l">#2196F3</item>
+        <!-- Text Look -->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <!-- Theme Colors -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorSecondary">#000000</item>
+        <!-- Icon Color -->
+        <item name="iconColorPrimary">#2196F3</item>
+        <!-- Search Bar Color -->
+        <item name="searchBarBackgroundColor">@color/search_bar_background_light</item>
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="Theme.MyFirstApp.Dark" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Status Bar -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- Background -->
+        <item name="android:background">#282828</item>
+        <!-- Text Look -->
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <!-- Theme Colors -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorSecondary">@color/white</item>
+        <!-- Icon Color -->
+        <item name="iconColorPrimary">@color/purple_500</item>
+        <!-- Search Bar Color -->
+        <item name="searchBarBackgroundColor">@color/search_bar_background_light</item>
+    </style>
+
+    <!-- High Contrast Theme -->
+    <style name="Theme.MyFirstApp.HighContrast" parent="Theme.MyFirstApp">
+        <!-- Status Bar -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- Text Look -->
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+        <!-- Theme Colors -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorSecondary">#000000</item>
+        <!-- Icon Color -->
+        <item name="iconColorPrimary">@color/black</item>
+        <!-- Search Bar Color -->
+        <item name="searchBarBackgroundColor">@color/search_bar_background_light</item>
+    </style>
+
+    <!-- UIUC Theme -->
+    <style name="Theme.MyFirstApp.UIUC" parent="Theme.MyFirstApp">
+        <!-- Status Bar -->
+        <item name="android:statusBarColor" tools:targetApi="l">#FF5F05</item>
+        <!-- Background -->
+        <item name="android:background">#213D6A</item>
+        <!-- Text Look -->
+        <item name="android:textColor">#FF5F05</item>
+        <item name="android:textStyle">normal</item>
+        <!-- Theme Colors -->
+        <item name="colorPrimary">#FF5F05</item>
+        <item name="colorSecondary">#FFFFFF</item>
+        <!-- Icon Color -->
+        <item name="iconColorPrimary">#FF5F05</item>
+        <!-- Search Bar Color -->
+        <item name="searchBarBackgroundColor">@color/search_bar_background_light</item>
+    </style>
+</resources>
+

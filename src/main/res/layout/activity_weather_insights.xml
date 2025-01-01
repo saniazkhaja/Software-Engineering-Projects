@@ -1,0 +1,82 @@
+<!-- activity_weather_insights.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header displaying city name and weather insights -->
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Response area to display LLM response -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:id="@+id/responseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text=""
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+    </ScrollView>
+
+    <!-- Container for generated question buttons -->
+    <LinearLayout
+        android:id="@+id/questionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/questionButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/questionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+    <!-- User input for custom question -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <EditText
+            android:id="@+id/customQuestionInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter your own question"
+            android:textColorHint="#B0B0B0"
+            android:padding="8dp"
+            android:textColor="#808080"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/submitCustomQuestionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ask" />
+    </LinearLayout>
+</LinearLayout>

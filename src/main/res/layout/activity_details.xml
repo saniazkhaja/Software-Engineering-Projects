@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Used to display more information on a certain city such as the map and weather of the city-->
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--  Icon with  City Location-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewLocationIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Map Icon"
+            app:srcCompat="@drawable/ic_location_icon" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="City Name"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--  Display Date and time-->
+    <TextView
+        android:id="@+id/dateTime_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Date and Time"
+        android:textSize="20sp"
+        android:textColor="?attr/colorSecondary"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Weather and Temperature-->
+    <LinearLayout
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="left|center"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Weather Icon" />
+
+        <TextView
+            android:id="@+id/temperature_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:text="--°C"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Weather Description   -->
+    <TextView
+        android:id="@+id/weatherDescription_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Weather Description"
+        android:textSize="20sp"
+        android:textColor="?attr/colorSecondary"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Grid Layout for Humidity and Wind -->
+
+    <GridLayout
+        android:layout_width="333dp"
+        android:layout_height="117dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:columnCount="4"
+        android:padding="8dp"
+        android:rowCount="2">
+
+        <!-- Humidity Row -->
+        <ImageView
+            android:id="@+id/humidityIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_humidity_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="start|center_vertical"
+            android:text="\tHumidity"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/humidity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_gravity="end|center_vertical"
+            android:text="%"
+            android:textSize="18sp" />
+
+        <!-- Wind Speed Row -->
+        <ImageView
+            android:id="@+id/windIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_wind_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="start|center_vertical"
+            android:text="\tWind Speed"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wind_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_gravity="end|center_vertical"
+            android:text="miles/h"
+            android:textSize="18sp" />
+    </GridLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/mapButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Show Map"-->
+<!--        tools:layout_editor_absoluteY="326dp" />-->
+
+    <Button
+        android:id="@+id/weatherInsightsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather Insights"
+        tools:layout_editor_absoluteY="326dp" />
+
+</LinearLayout >
